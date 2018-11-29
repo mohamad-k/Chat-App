@@ -3,9 +3,10 @@ const app = express();
 const socketIo = require("socket.io");
 // const fs = require("fs");
 app.use(express.static("public"));
+var port = process.env.PORT || 8001;
 
-const server = app.listen(8080, () => {
-  console.log("app running");
+const server = app.listen(port, () => {
+  console.log(`app running on port ${port}`);
 });
 const io = socketIo(server);
 var connections = [];
