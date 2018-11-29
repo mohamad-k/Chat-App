@@ -32,7 +32,7 @@ socket.on("chat", data => {
     clock +
     "</sub></p></div>";
 });
-message.addEventListener("keypress", data => {
+message.addEventListener("keyup", data => {
   socket.emit("typing", userName.value);
 });
 socket.on("typing", data => {
