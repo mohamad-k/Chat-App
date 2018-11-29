@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+    <script src="/socket.io/socket.io.js"></script>
+  </head>
+  <body>
+    <h1 id="fuck">Chat App</h1>
+    <div id="chatDiv">
+      <div id="chatWindow"></div>
+
+      <div id="online"></div>
+
+      <form action="" id="form">
+        <input
+          id="userName"
+          type="text"
+          placeholder="Enter user name"
+          required=""
+        /><br />
+        <br />
+        <input
+          type="text"
+          id="message"
+          placeholder="Enter message"
+          required=""
+        /><br />
+        <button id="send">Send</button>
+      </form>
+    </div>
+    <hr />
+
+    <div id="output"></div>
+
+    <div id="typing">-</div>
+    <script src="client.js"></script>
+  </body>
+</html>
