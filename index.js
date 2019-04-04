@@ -17,7 +17,6 @@ io.on("connection", socket => {
   connections.push(socket);
   console.log("user connected");
   io.sockets.emit("userCount", { users: usersOnline });
-  //   console.log(connections.length);
 
   socket.on("chat", data => {
     io.sockets.emit("chat", data);
@@ -31,5 +30,4 @@ io.on("connection", socket => {
     connections.splice(connections.indexOf(socket), 1);
     io.sockets.emit("userCount", { users: usersOnline });
   });
-  //   console.log(usersOnline);
 });

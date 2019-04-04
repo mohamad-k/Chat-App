@@ -5,36 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="./style.css" />
     <script src="/socket.io/socket.io.js"></script>
   </head>
-  <body>
-    <h1 id="fuck">Chat App</h1>
+  <body class="text-center">
+    <h1 id="appName">Chat App</h1>
 
-    <div id="output"></div>
+    <div class="container" id="output"></div>
 
     <div id="typing">-</div>
-    <hr />
-    <div id="chatDiv">
+    <hr class="w-50" />
+    <div class="container" id="chatDiv ">
       <div id="chatWindow"></div>
 
       <div id="online"></div>
 
       <form action="" id="form">
         <input
+        class="form-control m-auto  w-50" 
           id="userName"
           type="text"
-          placeholder="Enter user name"
+          placeholder="Enter your Name"
           required=""
-        /><br />
-        <br />
-        <input
+        />
+        <input class="form-control w-50  m-auto"
           type="text"
           id="message"
-          placeholder="Enter message"
+          placeholder="type a Message..."
           required=""
-        /><br />
-        <button id="send">Send</button>
+        /><br/>
+        <button id="send" class="btn btn-info mt-2">Send</button>
       </form>
     </div>
     <script src="client.js"></script>
